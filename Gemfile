@@ -50,3 +50,5 @@ group :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'shoulda-matchers', require: false
 end
+
+gem 'bootstrap-sass', '~> 3.3.1'
