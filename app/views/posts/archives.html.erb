@@ -1,11 +1,10 @@
 <div class="container">
-
 <div class="row">
   <div class="col-sm-9 archives-container">
+    <h1 class="archive-title">Blog Archive</h1>
     <% @all_posts.each do |post| %>
-      <div class="index-post-container">
-        <p class="date-time"><%= post.created_at.strftime("%^B %-d, %Y") %></p>
-        <p class="post-title"><%= link_to post.title, post %></p>
+      <div class="archives index-post-container">
+        <p><span class="post-title"><%= link_to post.title, post %></span><span class="date-time"><%= post.created_at.strftime("%B %-d, %Y") %></span></p>
       </div>
 
     <% end %>

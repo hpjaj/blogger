@@ -142,7 +142,28 @@ a:hover, .cancel-button a:hover {
   font-size: 14px;
 }
 
+.archives-container h1 {
+  padding: 30px 0 50px 20px;
+  font-weight: 700;
+}
 
+.archive-title {
+  border-bottom: 1px dotted #aaaaaa;
+}
+
+.archives .date-time {
+  font-style: italic;
+}
+
+.archives .post-title {
+  font-size: 20px;
+  padding-right: 20px;
+}
+
+.archives .index-post-container {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 
 
 
