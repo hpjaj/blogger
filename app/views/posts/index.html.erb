@@ -4,8 +4,10 @@
   </div>
   <div>
     <% @posts.each do |post| %>
-      <%= post.title %>
-      <%= post.body %>
+      <div>
+        <p><%= link_to post.title, post %></p>
+        <p><%= post.body %></p>
+      </div>
     <% end %>
   </div>
 </div>

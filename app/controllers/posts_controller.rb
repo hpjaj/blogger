@@ -15,14 +15,23 @@ class PostsController < ApplicationController
       flash[:error] = "Something went wrong.  Please try again."
       render :new
     end
-
-  end
-
-  def edit
   end
 
   def show
     @post = Post.find(params[:id])
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update_attributes(posts_params)
+      redirect_to post_path
+    else
+      flash[:error] = "Something went wrong.  Please try again."
+    end
   end
 
   private
