@@ -1,13 +1,26 @@
 <div class="container">
-  <div>
-    <%= link_to "New Blog Post", new_post_path %>
-  </div>
-  <div>
-    <% @posts.each do |post| %>
+  <div class="row">
+    <div class="col-sm-9 green">
       <div>
-        <p><%= link_to post.title, post %></p>
-        <p><%= post.body %></p>
+        <%= link_to "New Blog Post", new_post_path %>
       </div>
-    <% end %>
+      <div>
+        <% @posts.each do |post| %>
+          <div class="grey">
+            <p><%= link_to post.title, post %></p>
+            <p><%= post.body %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-sm-3 blue">
+      <div>
+        <% @posts.each do |post| %>
+          <div>
+            <p><%= link_to post.title, post %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
