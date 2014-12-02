@@ -1,19 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-9 green">
-      <div>
+    <div class="col-sm-9 index-posts-column">
+      <div class="new-blog-post-link pull-right">
         <%= link_to "New Blog Post", new_post_path %>
       </div>
       <div>
         <% @posts.each do |post| %>
-          <div class="grey">
-            <p><%= link_to post.title, post %></p>
+          <div class="index-post-container">
+            <p class="post-title"><%= link_to post.title, post %></p>
             <p><%= truncate( (post.body), length: 1000 ) %></p>
           </div>
+
         <% end %>
       </div>
     </div>
-    <div class="col-sm-3 blue">
+    <div class="col-sm-3 right-navigation">
       <div>
         <% @posts.each do |post| %>
           <div>

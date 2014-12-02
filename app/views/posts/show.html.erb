@@ -1,6 +1,5 @@
-<div class="container">
-  <p><%= link_to "All Posts", posts_path %></p>
-  <p><%= @post.title %></p>
+<div class="container show-container">
+  <p class="post-title"><%= @post.title %></p>
   <p><%= @post.body %></p>
-  <p><%= link_to "Edit Post", edit_post_path %></p>
+  <p class="pull-right"><%= link_to "Edit Post", edit_post_path %></p>
 </div>
