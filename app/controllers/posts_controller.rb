@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(posts_params)
     if @post.save
-      redirect_to posts_path
+      redirect_to root_path
     else
       flash[:error] = "Something went wrong.  Please try again."
       render :new
