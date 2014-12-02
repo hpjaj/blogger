@@ -1,5 +1,13 @@
-<div class="container show-container">
-  <p class="post-title"><%= @post.title %></p>
-  <p><%= @post.body %></p>
-  <p class="pull-right"><%= link_to "Edit Post", edit_post_path %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 show-container">
+      <p class="post-title"><%= @post.title %></p>
+      <p><%= @post.body %></p>
+      <p class="pull-right"><%= link_to "Edit Post", edit_post_path %></p>
+    </div>
+
+    <div class="col-sm-3 right-navigation">
+      <%= render 'common/right_navigation' %>
+    </div>
+  </div>
 </div>

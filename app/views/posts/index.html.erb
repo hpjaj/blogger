@@ -15,13 +15,11 @@
       </div>
     </div>
     <div class="col-sm-3 right-navigation">
-      <div>
-        <% @posts.each do |post| %>
-          <div>
-            <p><%= link_to post.title, post %></p>
-          </div>
-        <% end %>
-      </div>
+      <%= render 'common/right_navigation' %>
     </div>
   </div>
+</div>
+
+<div class="container">
+  <%= will_paginate @posts %>
 </div>

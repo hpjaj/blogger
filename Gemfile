@@ -53,3 +53,4 @@ end
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'faker'
+gem 'will_paginate', '~> 3.0.6'

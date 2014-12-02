@@ -19,6 +19,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300,400);
 
 
+$post_background_color: #f2f2f2;
+
 body {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
@@ -30,7 +32,7 @@ body {
 }
 
 .title-header h1 {
-  color: #f2f2f2;
+  color: $post_background_color;
   font-size: 3.2em;
   padding-left: 40px;
   padding-top: 20px;
@@ -53,11 +55,17 @@ body {
 }
 
 .index-posts-column, .show-container {
-  background-color: #f2f2f2;
+  background-color: $post_background_color;
 }
 
 .right-navigation {
   background-color: rgb(237,237,237);
+}
+
+.right-navigation-partial {
+  padding: 25px 10px 20px;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .index-post-container {
@@ -70,7 +78,7 @@ body {
 }
 
 .show-container p {
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 .index-post-container:nth-child(1) {
@@ -85,6 +93,18 @@ body {
   font-size: 30px;
 }
 
+.pagination {
+  color: $post_background_color;
+}
+
+.pagination a {
+  color: #aaaaaa;
+}
+
+.pagination a:hover {
+  color: $post_background_color;
+}
+
 a {
   color: black;
 }
@@ -93,3 +113,40 @@ a:hover {
   text-decoration: none;
   color: #1581eb;
 }
+
+
+
+@media screen and (max-width: 31.5em) {
+
+  .title-header h1 {
+    font-size: 2em;
+    padding-left: 40px;
+    padding-top: 10px;
+  }
+
+  .title-header h4 {
+    font-size: 1em;
+    padding-left: 40px;
+    padding-bottom: 20px;
+  }
+
+  .post-title {
+    font-size: 22px;
+  }
+
+  .index-post-container {
+    padding: 10px;
+  }
+
+  .show-container {
+    padding: 20px;
+  }
+  
+}
+
+
+
+
+
+
+
