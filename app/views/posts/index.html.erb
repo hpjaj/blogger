@@ -8,7 +8,7 @@
         <% @posts.each do |post| %>
           <div class="grey">
             <p><%= link_to post.title, post %></p>
-            <p><%= post.body %></p>
+            <p><%= truncate( (post.body), length: 1000 ) %></p>
           </div>
         <% end %>
       </div>
