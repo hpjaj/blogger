@@ -2,4 +2,10 @@
   <div>
     <%= link_to "New Blog Post", new_post_path %>
   </div>
+  <div>
+    <% @posts.each do |post| %>
+      <%= post.title %>
+      <%= post.body %>
+    <% end %>
+  </div>
 </div>
