@@ -7,6 +7,7 @@
       <div>
         <% @posts.each do |post| %>
           <div class="index-post-container">
+            <p class="date-time"><%= post.created_at.strftime("%^B %-d, %Y") %></p>
             <p class="post-title"><%= link_to post.title, post %></p>
             <p><%= markdown(truncate( (post.body), length: 1000, escape: false )) %></p>
           </div>

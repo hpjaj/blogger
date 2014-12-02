@@ -1,8 +1,17 @@
-<div class="container">
+<div class="container form" id="blog-form">
   <%= form_for @post do |f| %>
-    <p><%= f.text_field :title, placeholder: "Title" %></p>
-    <p><%= f.text_area :body, placeholder: "Body", size: "60x12" %></p>
-    <p><%= f.submit "Save Blog Post" %></p>
+    <div class="form-group">
+      <p><%= f.text_field :title, placeholder: "Title", class: 'form-control' %></p>
+    </div>
+    <div class="form-group">
+      <p><%= f.text_area :body, placeholder: "Body", rows: 19, class: 'form-control' %></p>
+    </div>
+    <div class="form-group">
+      <p><%= f.submit "Save Blog Post", class: 'btn btn-default pull-right' %></p>
+    </div>
   <% end %>
-  <p><%= link_to "Cancel", :back %></p>
+    <div class="form-group">
+      <p class="cancel-button"><%= link_to "Cancel", :back %></p>
+    </div>
+
 </div>

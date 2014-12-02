@@ -36,6 +36,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def archives
+    @all_posts = Post.all.most_recently_created.paginate(page: params[:page], per_page: 15)
+  end
+
   private
 
   def posts_params

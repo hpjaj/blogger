@@ -1,11 +1,16 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-9 show-container">
+      <p class="date-time"><%= @post.created_at.strftime("%^B %-d, %Y") %></p>
       <p class="post-title"><%= @post.title %></p>
       <p><%= markdown @post.body %></p>
 
       <p class="pull-right"><%= link_to "Edit Post", edit_post_path %></p>
+        <div>
+          <span class="author-signature">Posted by Harry Levine  |   <%= @post.created_at.strftime("%b %-d, %Y") %></span>
+        </div>
     </div>
+    
 
     <div class="col-sm-3 right-navigation">
       <%= render 'common/right_navigation' %>

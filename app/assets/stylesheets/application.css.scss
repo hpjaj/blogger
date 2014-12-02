@@ -22,6 +22,8 @@
 
 $post_background_color: #f2f2f2;
 
+
+
 body {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
@@ -55,7 +57,7 @@ body {
   margin-bottom: 0;
 }
 
-.index-posts-column, .show-container {
+.index-posts-column, .show-container, .archives-container {
   background-color: $post_background_color;
 }
 
@@ -94,7 +96,7 @@ body {
   font-size: 30px;
 }
 
-.pagination {
+.pagination, .cancel-button a {
   color: $post_background_color;
 }
 
@@ -110,10 +112,37 @@ a {
   color: black;
 }
 
-a:hover {
+a:hover, .cancel-button a:hover {
   text-decoration: none;
   color: #1581eb;
 }
+
+.right-nav-title-div {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.date-time {
+  color: rgb(162,162,162);
+}
+
+.show-container .date-time {
+  margin-bottom: 0;
+}
+
+.show-container .post-title {
+  padding-top: 10px;
+}
+
+#blog-form {
+  padding-top: 50px;
+}
+
+.author-signature {
+  font-size: 14px;
+}
+
+
 
 
 
@@ -139,7 +168,7 @@ a:hover {
     padding: 10px;
   }
 
-  .show-container {
+  .show-container, .archives-container {
     padding: 20px;
   }
   

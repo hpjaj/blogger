@@ -1,0 +1,23 @@
+<div class="container">
+
+<div class="row">
+  <div class="col-sm-9 archives-container">
+    <% @all_posts.each do |post| %>
+      <div class="index-post-container">
+        <p class="date-time"><%= post.created_at.strftime("%^B %-d, %Y") %></p>
+        <p class="post-title"><%= link_to post.title, post %></p>
+      </div>
+
+    <% end %>
+  </div>
+  
+  <div class="col-sm-3 right-navigation">
+    <%= render 'common/right_navigation' %>
+  </div>
+</div>
+
+
+</div>
+<div class="container">
+  <%= will_paginate @all_posts %>
+</div>
