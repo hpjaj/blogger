@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.paginate(page: params[:page], per_page: 5)
-    @all_posts = Post.all
+    @posts = Post.all.most_recently_created.paginate(page: params[:page], per_page: 5)
+    @all_posts = Post.all.most_recently_created
   end
 
   def new
@@ -20,7 +20,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @all_posts = Post.all
+    @all_posts = Post.all.most_recently_created
   end
 
   def edit

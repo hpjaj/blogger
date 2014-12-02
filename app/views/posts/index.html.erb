@@ -8,7 +8,7 @@
         <% @posts.each do |post| %>
           <div class="index-post-container">
             <p class="post-title"><%= link_to post.title, post %></p>
-            <p><%= truncate( (post.body), length: 1000 ) %></p>
+            <p><%= markdown(truncate( (post.body), length: 1000, escape: false )) %></p>
           </div>
 
         <% end %>
